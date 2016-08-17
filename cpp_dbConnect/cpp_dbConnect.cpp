@@ -201,7 +201,6 @@ void ProccessCommand(HWND hWnd, int type, const TCHAR* id, const TCHAR* pwd)
 			wstr.append(L"', '");
 			wstr.append(pwd);
 			wstr.append(L"')");
-			MessageBox(hWnd, wstr.c_str(), L"비번 확인 결과", MB_OK);
 			if (true == DBExcuteSQL((SQLWCHAR*)wstr.c_str()))
 			{
 				MessageBox(hWnd, L"아이디와 비밀번호 일치!", L"비번 확인 결과", MB_OK);
@@ -221,7 +220,6 @@ void ProccessCommand(HWND hWnd, int type, const TCHAR* id, const TCHAR* pwd)
 			wstr.append(L"', '");
 			wstr.append(pwd);
 			wstr.append(L"')");
-			MessageBox(hWnd, wstr.c_str(), L"아이디 삭제 결과", MB_OK);
 			if (true == DBExcuteSQL((SQLWCHAR*)wstr.c_str()))
 			{
 				MessageBox(hWnd, L"삭제 성공!", L"아이디 삭제 결과", MB_OK);
